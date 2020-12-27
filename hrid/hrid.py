@@ -10,8 +10,9 @@ DICTIONARY = {
     'noun': NOUNS,
     'verb': VERBS,
     'adverb': ADVERBS,
-    'number': list(range(10,99))
+    'number': list(map(str, range(10,99)))
 }
+
 
 class HRID:
     def __init__(self, delimeter='-', hridfmt=('adjective', 'noun', 'verb', 'adverb')):
@@ -23,9 +24,9 @@ class HRID:
     def generate(self):
         phrases = list()
         for element in self.phrasefmt:
-            if isinstance(element, (str, int)): 
-                phrases.append(str(element))
-            if isinstance(element, (list, set, tuple, dict)):
+            if isinstance(element, (str)): 
+                phrases.append(element)
+            if isinstance(element, (list)):
                 phrases.append(random.choice(element))
 
         return self.delimeter.join(phrases)
