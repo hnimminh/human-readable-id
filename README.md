@@ -1,3 +1,6 @@
+[![N|Solid](https://repository-images.githubusercontent.com/324334992/6016fe00-4882-11eb-8824-68c825521965)](https://github.com/hnimminh/human-readable-id)
+
+
 <p  align="center">
   <strong>HRID: Human Readable Identifier</strong>
   <br>
