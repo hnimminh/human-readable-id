@@ -133,3 +133,6 @@ setup(
         'upload': UploadCommand,
     },
 )
+
+# ./setup.py upload
+# python3 -m twine upload dist/*
