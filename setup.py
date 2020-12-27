@@ -19,7 +19,7 @@ URL = 'https://github.com/hnimminh/human-readable-id'
 EMAIL = 'hnimminh@outlook.com'
 AUTHOR = 'Minh Minh'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.2.0'
+VERSION = '0.2.1'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
