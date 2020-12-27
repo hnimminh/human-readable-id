@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# https://github.com/navdeep-G/setup.py
 # Note: To use the 'upload' functionality of this file, you must:
 #   $ pipenv install twine --dev
 
@@ -12,13 +13,13 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'mypackage'
-DESCRIPTION = 'My short description for my project.'
-URL = 'https://github.com/me/myproject'
-EMAIL = 'me@example.com'
-AUTHOR = 'Awesome Soul'
+NAME = 'hrid'
+DESCRIPTION = 'The human readable id generator library for python3'
+URL = 'https://github.com/hnimminh/human-readable-id'
+EMAIL = 'hnimminh@outlook.com'
+AUTHOR = 'Minh Minh'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.0'
+VERSION = '0.0.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -121,6 +122,9 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
