@@ -1,8 +1,9 @@
 import random
-from adjectives import ADJECTIVES
-from nouns import NOUNS, ANIMALS, FLOWERS
-from verbs import VERBS
-from adverbs import ADVERBS
+from .adjectives import ADJECTIVES
+from .nouns import NOUNS, ANIMALS, FLOWERS
+from .verbs import VERBS
+from .adverbs import ADVERBS
+
 
 DICTIONARY = {
     'adjective': ADJECTIVES,
@@ -22,10 +23,9 @@ class HRID:
     def generate(self):
         phrases = list()
         for element in self.phrasefmt:
-            if isinstance(element, (str, int, float, bool)): 
-                phrases.append(element)
-            else:
+            if isinstance(element, (str, int)): 
+                phrases.append(str(element))
+            if isinstance(element, (list, set, tuple, dict)):
                 phrases.append(random.choice(element))
 
         return self.delimeter.join(phrases)
-
