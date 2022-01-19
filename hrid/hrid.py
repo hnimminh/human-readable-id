@@ -15,18 +15,20 @@ DICTIONARY = {
 
 
 class HRID:
-    def __init__(self, delimeter='-', hridfmt=('adjective', 'noun', 'verb', 'adverb')):
+    def __init__(self, delimeter='-', hridfmt=('adjective', 'noun', 'verb', 'adverb'), seed=None):
         self.delimeter = delimeter
         self.phrasefmt = list()
+        random_args = (s for s in (seed, ) if s)
+        self.random = random.Random(*random_args)
         for element in hridfmt:
             self.phrasefmt.append(DICTIONARY.get(element, element))
 
     def generate(self):
         phrases = list()
         for element in self.phrasefmt:
-            if isinstance(element, (str)): 
+            if isinstance(element, (str)):
                 phrases.append(element)
             if isinstance(element, (list)):
-                phrases.append(random.choice(element))
+                phrases.append(self.random.choice(element))
 
         return self.delimeter.join(phrases)
